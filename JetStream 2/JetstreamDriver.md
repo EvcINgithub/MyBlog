@@ -193,7 +193,6 @@ graph TD
                 performance.measure(iterationMarkLabel, iterationMarkLabel);
 
                 
-
                 results.push(Math.max(1, end - start));
             }
             benchmark.validate?.(120);
