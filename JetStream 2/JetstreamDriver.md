@@ -4,9 +4,34 @@
 
 |文件名|功能|
 |--|--|
-|index.html|JetStream3的入口文件,也是JetSream 3 主要逻辑的执行环境|
+|index.html|JetStream 3的入口文件,也是JetSream 3主要逻辑的执行环境|
 |JetStreamDriver.js|加载文件，运行测试，计算结果均在此文件|
 |param.js|构建测试的参数|
+|ARES-6/air|聚焦底层编译细节（无复杂业务逻辑，仅针对IR管线、寄存器分配等低层级操作）|
+|ARES-6/basic|基于 ECMA-55 BASIC 标准实现，专门测试JS引擎对**生成器（含递归生成器、多 yield 点）**的执行性能|
+|ARES-6/Babylon|测试JS引擎对ES6语法解析的性能属于是真实案例|
+|ARES-6/ML|测试ES6类密集型、复杂计算场景的执行性能|
+|cdjs|聚焦JavaScript引擎通用基础场景的专项性能测试集|
+|code-load|从JS代码被浏览器/引擎获取（加载）到完成解析、预处理，最终准备执行这一前置流程的性能表现|
+|octane|经典测试集，覆盖面广泛|
+|RexBench|正则表达式（Regular Expression）处理管线|
+|simple|JS引擎最基础的语法支持和运行可用性|
+|SeaMonster||
+|BigInt|聚焦JavaScript原生BigInt类型的全流程处理性能|
+|Proxy|聚焦JavaScript原生Proxy的全流程处理性能|
+|class-fields|针对JavaScript中Class Fields（类字段，含 ES6 + 公共类字段、私有类字段、静态类字段）特性的专项测试组件|
+|Generators|针对 JavaScript 中生成器的测试组件|
+|wasm|针对 WebAssembly（Wasm）技术全流程性能|
+|worker|针对JavaScript Web中Worker（含普通Web Worker、SharedWorker）多线程特性|
+|WSL|小型JS脚本的快速加载、解析与执行性能，侧重轻量级脚本的运行效率|
+|8bitbench|8 位低精度数值的运算、数据处理性能，针对字节级数据操作的专项测试|
+|wasm/zlib|Wasm 版 zlib 压缩 / 解压算法的执行性能，聚焦 Wasm 在数据压缩场景的表现|
+|wasm/dotnet|.NET 程序编译为 Wasm 模块后的运行性能，验证 .NET 到 Wasm 跨平台编译的效率|
+|wasm/j2cl-box2d|J2CL（Java转Closure再转 Wasm）编译的 Box2D 物理引擎 Wasm 模块性能，侧重游戏物理模拟场景|
+|prismjs|Prism代码高亮库的运行性能，测试语法解析、代码着色等前端工具的执行效率|
+|intl|JavaScript Intl API 的国际化处理性能，包括日期格式化、语言排序、数字本地化等场景|
+|SunSpider|经典 JS 基础语法与运算性能测试，覆盖数组操作、字符串处理、数学运算等基础场景|
+|web-tooling-benchmark|前端工程化工具链的运行性能，测试 Babel、ESLint 等工具的代码转译、校验效率|
 
 ## 执行概述
 
